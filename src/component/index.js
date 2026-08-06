@@ -5,5 +5,5 @@ import Container from "./container/Container";
 import Logoutbtn from "./Header/Logoutbtn";
 
 export {
-    Header , Footer , Container , Logoutbtn
+    Header , Footer , Container , Logoutbtn , Logo
 }
