@@ -9,14 +9,4 @@ export default defineConfig({
 })
 
 
-// tailwind.config.js
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        // Map 'primary' to your brand's specific color hex code
-        primary: '#3b82f6', 
-      },
-    },
-  },
-}
+
