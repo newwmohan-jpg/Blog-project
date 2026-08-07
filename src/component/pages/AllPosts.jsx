@@ -5,9 +5,11 @@ import {Container , PostCard} from "../index"
 
 const AllPosts = () => {
     const [posts , setPosts] = useState([])
-    useEffect(()=>{},[])
-    service.getPost([]).then((posts)=>
-        {if(posts) setPosts(posts.documents)})
+   useEffect(() => {
+    service.getPost([]).then((posts) => {
+        if (posts) setPosts(posts.documents);
+    });
+}, []);
     
   return (
     <div className="w-full py-8">
@@ -15,7 +17,7 @@ const AllPosts = () => {
             <div className="flex flex-wrap">
             {posts.map((post)=>(
                 <div key={post.$id} className="p-2 w-1/4">
-                    <PostCard post={post}/>
+                    <PostCard {...post} />
             </div>
             ))}
             </div>

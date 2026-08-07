@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {postForm , Container} from "../index"
+import {PostForm , Container} from "../index"
 import service from '../../appwrite/config'
 import { useParams , useNavigate} from 'react-router-dom'
 const Editpost = () => {
@@ -20,7 +20,7 @@ const Editpost = () => {
     return post ? (
         <div className='py-8'>
             <Container>
-                <postForm post={post}/>
+                <PostForm post={post}/>
             </Container>
 
         </div>

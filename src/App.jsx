@@ -5,10 +5,11 @@ import { useDispatch } from 'react-redux'
 import authservice from './Appwrite/Auth'
 import { login, logout } from './Store/authSlice'
 import { Footer, Header } from './component'
+import { Outlet } from 'react-router-dom'
+
 
 
 function App() {
-
   const [loading, setLoading] = useState(true)
   const dispatch = useDispatch()
 
@@ -16,15 +17,13 @@ function App() {
     authservice.getCurrentUser()
       .then((userData) => {
         if (userData) {
-          dispatch(login({ userData }))
+          dispatch(login(userData))  
         } else {
           dispatch(logout())
         }
       })
       .finally(() => setLoading(false))
-
   }, [])
-
 
   return !loading ? (
     <div className='min-h-screen  flex flex-wrap content-between  bg-gray-400'>
@@ -32,7 +31,7 @@ function App() {
         <Header />
         {
           <main>
-            TODO : {/* Outlet */}
+            TODO : <Outlet />
           </main>
         }
         <Footer />
@@ -44,3 +43,6 @@ function App() {
 }
 
 export default App
+
+
+ 

@@ -5,11 +5,14 @@ import Container from "./container/Container";
 import Logoutbtn from "./Header/Logoutbtn";
 import RTE from "./RTE";
 import Select from "./Header/Select";
-import Signup from "./pages/Signup";
-import Login from "./pages/Login";
+import Signup from "../component/Signup";
+import Login from "../component/Login";
 import PostForm from "./post-form/PostForm";
 import PostCard from "./PostCard";
 import AuthLayout from "../component/Header/AuthLayout" 
+import Button from "../component/Header/Button"
+import Input from "../component/Header/Input"
+
 export {
-    Header , Footer , Container , Logoutbtn , Logo , RTE , Select ,Signup , Login , PostForm , PostCard , AuthLayout
+    Header , Footer , Container , Logoutbtn , Logo , RTE , Select ,Signup , Login , PostForm , PostCard , AuthLayout , Button , Input
 }
